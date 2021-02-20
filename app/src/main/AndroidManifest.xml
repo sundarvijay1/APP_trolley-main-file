@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="org.tensorflow.lite.examples.classification">
+
+    <uses-sdk />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/tfe_ic_app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/LoginTheme"
+        tools:replace="android:label">
+<!--        <activity android:name=".splashScreen"></activity>-->
+        <!-- <activity android:name=".dialogactivity" -->
+        <!-- android:excludeFromRecents="true" -->
+        <!-- android:theme="@style/Theme.AppCompat.Dialog" -->
+        <!-- android:label="CHAT BOT"></activity> -->
+        <activity
+            android:name=".SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme" />
+
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme" />
+
+        <activity
+            android:name=".startchat"
+            android:label="Dolt"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Dialog"
+            android:windowSoftInputMode="stateVisible"/>
+        <activity
+            android:name=".reviewpage"
+            android:parentActivityName=".ClassifierActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Dummy" />
+        <activity
+            android:name=".splashScreen"
+            android:label="@string/tfe_ic_app_name"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ClassifierActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.ImageClassification" />
+    </application>
+
+</manifest>
